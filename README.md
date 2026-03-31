@@ -1,4 +1,4 @@
-[![humble](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/humble.yml/badge.svg)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/humble.yml) [![jazzy](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/jazzy.yml/badge.svg)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/jazzy.yml) [![kilted](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/kilted.yml/badge.svg)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/kilted.yml) [![rolling](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/rolling.yml/badge.svg)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/rolling.yml)
+[![humble](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/humble.yml/badge.svg?branch=humble)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/humble.yml) [![jazzy](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/jazzy.yml/badge.svg?branch=jazzy)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/jazzy.yml) [![kilted](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/kilted.yml/badge.svg?branch=kilted)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/kilted.yml) [![rolling](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/rolling.yml/badge.svg?branch=rolling)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/rolling.yml)
 [![humble-nightly](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/humble-nightly.yml/badge.svg)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/humble-nightly.yml) [![jazzy-nightly](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/jazzy-nightly.yml/badge.svg)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/jazzy-nightly.yml) [![kilted-nightly](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/kilted-nightly.yml/badge.svg)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/kilted-nightly.yml) [![rolling-nightly](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/rolling-nightly.yml/badge.svg)](https://github.com/fujitatomoya/ros2_persist_parameter_server/actions/workflows/rolling-nightly.yml)
 
 # ROS2 Persistent Parameter Server
@@ -87,10 +87,11 @@ parameter server has the following scope for persistent parameter. since paramet
 
 - Node Options
 
-  there are three important options:
+  there are four important options:
   - allow_undeclared_parameters: (default true)
   - automatically_declare_parameters_from_overrides: (default true)
   - allow_dynamic_typing: (default false)
+  - save-on-update: (default false)
 all of the configuration options will be passed via arguments as following.
 
 <table>
@@ -125,7 +126,7 @@ all of the configuration options will be passed via arguments as following.
         </tr>
         </tr>
         <tr>
-            <td rowspan=3>Node Options</td>
+            <td rowspan=4>Node Options</td>
             <td>--allow-declare true/false</td>
             <td>default enabled, if specified allow any parameter name to be set on parameter server without declaration by itself. Otherwise it does not.</td>
         </tr>
@@ -136,6 +137,10 @@ all of the configuration options will be passed via arguments as following.
         <tr>
             <td>--allow-dynamic-typing true/false</td>
             <td>Enables dynamic typing for parameters, allowing their types to be changed after declaration.</td>
+        </tr>
+        <tr>
+            <td>--save-on-update true/false</td>
+            <td>Saves parameter file each time the value of a parameter is changed.</td>
         </tr>
     </tbody>
 </table>
@@ -164,12 +169,12 @@ Tutorial Video is provided by [The Construct Robotics Institute](https://www.the
 
 ### [Supported Distribution](https://docs.ros.org/en/rolling/Releases.html)
 
-| Distribution      | Supported | Comment |
+| Distribution      | Supported | Branch |
 | :---------------- | :-------- | :--- |
-| Rolling Ridley    |    ✅    | Default branch, used for all distribution |
-| Kilted Kaiju      |    ✅    |   |
-| Jazzy Jalisco     |    ✅    |   |
-| Humble Hawksbill  |    ✅    |   |
+| Rolling Ridley    |    ✅    | [`rolling`](https://github.com/fujitatomoya/ros2_persist_parameter_server/tree/rolling) (default) |
+| Kilted Kaiju      |    ✅    | [`kilted`](https://github.com/fujitatomoya/ros2_persist_parameter_server/tree/kilted) |
+| Jazzy Jalisco     |    ✅    | [`jazzy`](https://github.com/fujitatomoya/ros2_persist_parameter_server/tree/jazzy) |
+| Humble Hawksbill  |    ✅    | [`humble`](https://github.com/fujitatomoya/ros2_persist_parameter_server/tree/humble) |
 
 #### Docker Container
 
@@ -187,7 +192,7 @@ apt install libyaml-cpp-dev libboost-program-options-dev libboost-filesystem-dev
 
 ### Prerequisites
 
-[ROS 2 source build environment](https://index.ros.org/doc/ros2/Installation/Rolling/Linux-Development-Setup) is required to build and run the parameter server.
+[ROS 2 source build environment](http://docs.ros.org/en/rolling/Installation/Alternatives/Ubuntu-Development-Setup.html) is required to build and run the parameter server.
 
 ### Build
 
@@ -195,7 +200,7 @@ Install local colcon workspace,
 
 ```bash
 # cd <colcon_workspace>/src
-# git clone https://github.com/fujitatomoya/ros2_persist_parameter_server
+# git clone -b <ROS_DISTRO> https://github.com/fujitatomoya/ros2_persist_parameter_server
 # cd <colcon_workspace>
 # colcon build --symlink-install --packages-select persist_parameter_server --cmake-args -D CLIENT_TEST_DEMO=ON
 # source install/local_setup.bash
