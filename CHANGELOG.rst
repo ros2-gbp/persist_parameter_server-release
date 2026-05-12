@@ -2,11 +2,12 @@
 Changelog for package persist_parameter_server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.1.0 (2026-05-12)
+2.0.0 (2026-05-12)
 ------------------
-* fix redundant and unexpected mergify configuration for barckports. (`#87 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/87>`_) (`#90 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/90>`_)
-* create downstream branches, apply corresponding changes to workflow. (`#79 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/79>`_) (`#82 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/82>`_)
-* enable mergifyio and added appropriate labels. (`#75 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/75>`_) (`#78 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/78>`_)
+* fix redundant and unexpected mergify configuration for barckports. (`#87 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/87>`_) (`#89 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/89>`_)
+* Add save on update argument (`#73 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/73>`_) (`#86 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/86>`_)
+* create downstream branches, apply corresponding changes to workflow. (`#79 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/79>`_) (`#81 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/81>`_)
+* enable mergifyio and added appropriate labels. (`#75 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/75>`_) (`#77 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/77>`_)
 * Upgrade github action/run-gemini-cli workflows. (`#71 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/71>`_)
 * doc,fix: link in readme pointing to valid URL (`#68 <https://github.com/fujitatomoya/ros2_persist_parameter_server/issues/68>`_)
   The URL to how to install ROS 2 has changed a while back.
