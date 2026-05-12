@@ -1,3 +1,26 @@
+## persist_parameter_server (lyrical) - 4.0.0-1
+
+The packages in the `persist_parameter_server` repository were released into the `lyrical` distro by running `/usr/bin/bloom-release --rosdistro lyrical persist_parameter_server` on `Tue, 12 May 2026 05:21:36 -0000`
+
+The `persist_parameter_server` package was released.
+
+Version of package(s) in repository `persist_parameter_server`:
+
+- upstream repository: https://github.com/fujitatomoya/ros2_persist_parameter_server.git
+- release repository: https://github.com/ros2-gbp/persist_parameter_server-release.git
+- rosdistro version: `1.0.5-3`
+- old version: `1.0.5-3`
+- new version: `4.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.13.0`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## persist_parameter_server (rolling) - 4.0.0-1
 
 The packages in the `persist_parameter_server` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling persist_parameter_server` on `Tue, 12 May 2026 04:54:55 -0000`
