@@ -1,3 +1,26 @@
+## persist_parameter_server (kilted) - 3.0.0-1
+
+The packages in the `persist_parameter_server` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --rosdistro kilted persist_parameter_server` on `Tue, 12 May 2026 04:40:19 -0000`
+
+The `persist_parameter_server` package was released.
+
+Version of package(s) in repository `persist_parameter_server`:
+
+- upstream repository: https://github.com/fujitatomoya/ros2_persist_parameter_server.git
+- release repository: https://github.com/ros2-gbp/persist_parameter_server-release.git
+- rosdistro version: `1.0.5-1`
+- old version: `1.0.5-1`
+- new version: `3.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.13.0`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## persist_parameter_server (jazzy) - 2.0.0-1
 
 The packages in the `persist_parameter_server` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy persist_parameter_server` on `Tue, 12 May 2026 04:28:41 -0000`
