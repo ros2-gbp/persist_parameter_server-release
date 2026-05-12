@@ -1,0 +1,12 @@
+Source: ros-lyrical-persist-parameter-server
+Section: misc
+Priority: optional
+Maintainer: Tomoya Fujita <Tomoya.Fujita@sony.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-dev, libboost-filesystem-dev, libboost-program-options-dev, ros-lyrical-ament-cmake, ros-lyrical-ament-cmake-pytest <!nocheck>, ros-lyrical-ament-lint-auto <!nocheck>, ros-lyrical-ament-lint-common <!nocheck>, ros-lyrical-launch <!nocheck>, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-rcutils, ros-lyrical-rmw, ros-lyrical-rmw-implementation-cmake, ros-lyrical-std-msgs, ros-lyrical-std-srvs, ros-lyrical-yaml-cpp-vendor, ros-lyrical-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-lyrical-persist-parameter-server
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lyrical-launch-ros, ros-lyrical-rclcpp, ros-lyrical-rclcpp-components, ros-lyrical-rcutils, ros-lyrical-rmw, ros-lyrical-rmw-implementation-cmake, ros-lyrical-std-msgs, ros-lyrical-std-srvs, ros-lyrical-yaml-cpp-vendor, ros-lyrical-ros-workspace
+Description: ros2 parameter server that other nodes can write/read parameters including persistent parameters.
