@@ -1,0 +1,12 @@
+Source: ros-jazzy-persist-parameter-server
+Section: misc
+Priority: optional
+Maintainer: Tomoya Fujita <Tomoya.Fujita@sony.com>
+Build-Depends: debhelper (>= 9.0.0), libboost-dev, libboost-filesystem-dev, libboost-program-options-dev, ros-jazzy-ament-cmake, ros-jazzy-ament-cmake-pytest <!nocheck>, ros-jazzy-ament-lint-auto <!nocheck>, ros-jazzy-ament-lint-common <!nocheck>, ros-jazzy-launch <!nocheck>, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-rcutils, ros-jazzy-rmw, ros-jazzy-rmw-implementation-cmake, ros-jazzy-std-msgs, ros-jazzy-std-srvs, ros-jazzy-yaml-cpp-vendor, ros-jazzy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-persist-parameter-server
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-launch-ros, ros-jazzy-rclcpp, ros-jazzy-rclcpp-components, ros-jazzy-rcutils, ros-jazzy-rmw, ros-jazzy-rmw-implementation-cmake, ros-jazzy-std-msgs, ros-jazzy-std-srvs, ros-jazzy-yaml-cpp-vendor, ros-jazzy-ros-workspace
+Description: ros2 parameter server that other nodes can write/read parameters including persistent parameters.
